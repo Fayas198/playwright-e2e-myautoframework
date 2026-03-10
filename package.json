@@ -1,0 +1,30 @@
+{
+  "name": "playwright-e2e-myautoframework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fayas198/playwright-e2e-myautoframework.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Fayas198/playwright-e2e-myautoframework/issues"
+  },
+  "homepage": "https://github.com/Fayas198/playwright-e2e-myautoframework#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.4.0"
+  },
+  "dependencies": {
+    "@axe-core/playwright": "^4.11.1",
+    "axios": "^1.13.6",
+    "cucumber": "^6.0.7",
+    "dotenv": "^17.3.1",
+    "mysql2": "^3.19.1"
+  }
+}
