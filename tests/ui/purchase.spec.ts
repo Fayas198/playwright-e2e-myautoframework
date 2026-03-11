@@ -1,8 +1,9 @@
 import { test, expect } from '../../fixtures/baseTest'
-import { checkoutData } from '../../utils/testdata'
+import { users } from '../../utils/testdata'
 
 test('complete purchase flow', async ({
 
+ loginPage,
  inventoryPage,
  cartPage,
  checkoutPage,
@@ -10,7 +11,12 @@ test('complete purchase flow', async ({
 
 }) => {
 
- await page.goto('/')
+ await loginPage.navigateToLoginPage()
+
+ await loginPage.login(
+   users.standardUser.username,
+   users.standardUser.password
+ )
 
  await inventoryPage.verifyInventoryPage()
 
@@ -21,9 +27,9 @@ test('complete purchase flow', async ({
  await cartPage.clickCheckout()
 
  await checkoutPage.enterCheckoutDetails(
-   checkoutData.customer.firstName,
-   checkoutData.customer.lastName,
-   checkoutData.customer.postalCode
+   'John',
+   'Doe',
+   '600001'
  )
 
  await checkoutPage.continueCheckout()
