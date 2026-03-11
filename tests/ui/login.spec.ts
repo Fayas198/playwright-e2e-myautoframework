@@ -1,15 +1,15 @@
-import { test, expect } from '@playwright/test'
-import { LoginPage } from '../../pages/LoginPage'
+import { test, expect } from '../../fixtures/baseTest'
+import { users } from '../../utils/testdata'
 
-test('valid login test', async ({ page }) => {
+test.use({ storageState: { cookies: [], origins: [] } })
 
-  const loginPage = new LoginPage(page)
+test('valid login test', async ({ loginPage, page }) => {
 
   await loginPage.navigateToLoginPage()
 
   await loginPage.login(
-    'standard_user',
-    'secret_sauce'
+    users.standardUser.username,
+    users.standardUser.password
   )
 
   await expect(page).toHaveURL(/inventory/)
