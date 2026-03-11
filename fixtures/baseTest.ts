@@ -8,10 +8,10 @@ import { CheckoutPage } from '../pages/CheckoutPage'
 
 type MyFixtures = {
 
- loginPage: LoginPage
- inventoryPage: InventoryPage
- cartPage: CartPage
- checkoutPage: CheckoutPage
+ readonly loginPage: LoginPage
+ readonly inventoryPage: InventoryPage
+ readonly cartPage: CartPage
+ readonly checkoutPage: CheckoutPage
 
 }
 
