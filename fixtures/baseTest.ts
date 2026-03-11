@@ -1,4 +1,5 @@
 import { test as base } from '@playwright/test'
+import '../hooks/testHooks';
 
 import { LoginPage } from '../pages/LoginPage'
 import { InventoryPage } from '../pages/InventoryPage'
